@@ -9,12 +9,14 @@ import pavment from './media/pavment.png';
 import transport from './media/transport.png';
 import whatsappIcon from './media/whatsapp-icon.svg';
 import video_desktop from './media/video_desktop.mp4';
-import differentials_1 from './media/differentials_1.png';
-import differentials_2 from './media/differentials_2.png';
-import differentials_3 from './media/differentials_3.png';
-import logos_1 from './media/Logos_1.png'
-import logos_2 from './media/Logos_2.svg'
-import logo_zion from './media/logo_zion.svg'
+import differentials_1 from './media/differentials_1.svg';
+import differentials_2 from './media/differentials_2.svg';
+import differentials_3 from './media/differentials_3.svg';
+import logos_1 from './media/Logos_1.png';
+import logos_2 from './media/Logos_2.svg';
+import logo_zion from './media/logo_zion.svg';
+import whatsapp from './media/whatsapp.svg';
+import email from './media/email.svg';
 import './App.css';
 
 function App() {
@@ -125,7 +127,7 @@ function App() {
 
         <header className={isScrolled ? 'scrolled' : ''}>
           <div className="logo">
-            <img src={logo} alt="logo" loading="lazy" width="336" height="48.64" />
+            <img src={logo} alt="logo" />
           </div>
           <button
             className={`burger-button ${menuOpen ? 'open' : ''}`}
@@ -202,25 +204,31 @@ function App() {
       <section className='differentials' ref={differentialsRef}>
         <h2>NOSSOS DIFERENCIAIS</h2>
         <div className="differentials-container">
-          <div className='differential-item'>
+          <div className='differential-item_1'>
             <img src={differentials_1} alt="differentials_1" />
             <h3>Respeito ao meio ambiente</h3>
             <p>
-              Comprometemo-nos com práticas sustentáveis e com a preservação ambiental em todos os nossos projetos.
+              Comprometemo-nos com práticas <br />
+              sustentáveis e com a preservação ambiental
+              <br /> em todos os nossos projetos.
             </p>
           </div>
-          <div className='differential-item'>
+          <div className='differential-item_2'>
             <img src={differentials_2} alt="differentials_2" />
             <h3>Equipe qualificada</h3>
             <p>
-              Contamos com profissionais altamente capacitados, dedicados à excelência em cada projeto.
+              Em 10 anos de atuação, nossa empresa <br />
+              nunca precisou refazer trabalho devido a <br />
+              erros internos, evidenciando nossa precisão e <br />
+              compromisso com a qualidade.
             </p>
           </div>
-          <div className='differential-item'>
+          <div className='differential-item_3'>
             <img src={differentials_3} alt="differentials_3" />
             <h3>Atendimento personalizado</h3>
             <p>
-              Nossa abordagem individualizada garante soluções específicas para as necessidades de cada cliente.
+              Nossa empresa tem um histórico sólido de <br />
+              entrega no prazo em todos os projetos.
             </p>
           </div>
         </div>
@@ -228,7 +236,8 @@ function App() {
 
       <section className="projetos" ref={projetosRef}>
         <h2>PROJETOS</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br/> tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Ao longo de nossa trajetória, desenvolvemos e concluímos com sucesso inúmeros projetos de terraplanagem, <br />
+          sempre atendendo às necessidades específicas de cada cliente e assegurando a qualidade em cada etapa.</p>
         <div className="marquee-wrapper">
           <div className="marquee marquee-normal">
             {projetos.map((projeto, index) => (
@@ -273,37 +282,40 @@ function App() {
         </div>
       </section>
 
-      <section className='footer'>
-        <div className="footer-content">
-          <div className="footer-left">
-            <img src={logo} alt="Logo Melo Silva" className="footer-logo" />
+      <section className='contato'>
+        <div className="contato-content">
+          <div className="contato-left">
+            <img src={logo} alt="Logo Melo Silva" className="contato-logo" />
           </div>
-          <nav className="footer-nav1">
+          <nav className="contato-nav1">
             <button className="home-button" onClick={() => scrollToSection(homeRef)}>Home</button>
             <button className="service-button" onClick={() => scrollToSection(servicosRef)}>Serviços</button>
           </nav>
-          <nav className="footer-nav2">
+          <nav className="contato-nav2">
             <button className="project-button" onClick={() => scrollToSection(projetosRef)}>Projetos</button>
             <button className="clients-button" onClick={() => scrollToSection(clientsRef)}>Clientes</button>
           </nav>
-          <nav className="footer-nav3">
+          <nav className="contato-nav3">
             <button className="differentials-button" onClick={() => scrollToSection(differentialsRef)}>Diferenciais</button>
             <button className="institutional-button" onClick={() => scrollToSection(institucionalRef)}>Institucional</button>
           </nav>
 
-          <nav className="footer-nav4">
-            <button className="whatsapp" onClick={() => window.open('https://wa.me/5511971571388', '_blank')}>+55 (11) 9 7157-1388</button>
-            <button className='email' onClick={() => window.open('contato@melosilva.com.br', '_blank')}>contato@melosilva.com.br</button>
+          <nav className="contato-nav4">
+            <button className="whatsapp" onClick={() => window.open('https://wa.me/5511971571388', '_blank')}><img src={whatsapp} alt='whatsapp-img' />  +55 (11) 9 7157-1388</button>
+            <button className='email' onClick={() => window.open('contato@melosilva.com.br', '_blank')}><img src={email} alt='email-img' /> contato@melosilva.com.br</button>
           </nav>
-
-          <div className="footer-line">
-          </div>
         </div>
+      </section>
+
+      <section className='footer'>
+        <div className="footer-line">
           <p>
-            Desenvolvido por<img src={logo_zion} alt='logo-zion' />
+            Desenvolvido por  <img src={logo_zion} alt='logo-zion' />
           </p>
           <p>&copy; 2024 Melo Silva</p>
+        </div>
       </section>
+
 
       <a
         href="https://wa.me/5511999999999"
