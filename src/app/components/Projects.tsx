@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 'use client'
 import { cn } from '../../../libs/utils'
 import { Tomorrow } from 'next/font/google'

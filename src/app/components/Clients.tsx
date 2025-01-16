@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import Marquee from 'react-fast-marquee'
+import Image from 'next/image'
 
 
 const Clients: React.FC = () => {
@@ -19,7 +20,7 @@ const Clients: React.FC = () => {
         >
             <Marquee gradient={false} speed={40}>
                 {logos.map((logo, index) => (
-                    <img
+                    <Image
                         key={index}
                         src={logo}
                         alt={`Logo ${index}`}
@@ -27,7 +28,7 @@ const Clients: React.FC = () => {
                     />
                 ))}
                 {logos.map((logo, index) => (
-                    <img
+                    <Image
                         key={index}
                         src={logo}
                         alt={`Logo ${index}`}
