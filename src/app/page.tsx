@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import { MenuMobile } from './components/MenuMobile';
 import Services from './components/Services';
-import AboutUs from './components/AboustUs';
 import Differentials from './components/Differentials';
 import Projects from './components/Projects';
 import Phrase from './components/Phrase';
@@ -22,7 +21,6 @@ export default function Home() {
         <Whatsapp />
         <Hero />
         <Services />
-        <AboutUs />
         <Differentials />
         <Projects />
         <Phrase />

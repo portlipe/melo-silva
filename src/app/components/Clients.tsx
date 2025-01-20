@@ -20,7 +20,7 @@ const Clients: React.FC = () => {
         >
             <Marquee gradient={false} speed={40}>
                 {logos.map((logo, index) => (
-                    <Image
+                    <img
                         key={index}
                         src={logo}
                         alt={`Logo ${index}`}
@@ -28,7 +28,7 @@ const Clients: React.FC = () => {
                     />
                 ))}
                 {logos.map((logo, index) => (
-                    <Image
+                    <img
                         key={index}
                         src={logo}
                         alt={`Logo ${index}`}
