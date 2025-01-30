@@ -1,7 +1,6 @@
-
 const Hero = () => {
   return (
-    <section id="hero" className="w-full h-screen relative z-0">
+    <section id="hero" className="w-full h-screen md:h-screen relative z-0">
       <div className="h-full">
         <video
           src="/video_desktop.mp4"
@@ -23,20 +22,30 @@ const Hero = () => {
           playsInline
           className="block md:hidden w-full h-full object-cover"
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-35 z-30"></div>
-      </div>
       <div className="absolute top-0 bottom-[132px] left-8 md:left-24 flex items-center z-50">
         <div className="hidden md:block">
-          <h1 className="text-white text-4xl lg:text-[44px] lg:mt-[525px] md:text-[40px] lg:max-w-[903px] lg:h-[55px] lg:whitespace-nowrap lg:mb-1 md:max-w-[500px] font-normal leading-snug bg-[#736F5C]">
+          <h1 className="text-white text-[22px] lg:text-[44px] lg:mt-[525px] md:text-[40px] lg:max-w-[903px] lg:h-[55px] mb-1 lg:whitespace-nowrap lg:mb-1 md:max-w-[500px] font-normal leading-snug bg-[#736F5C]">
             Preparando o terreno para obras de grande
           </h1>
-          <h2 className="text-white text-4xl lg:text-[44px] md:text-[40px] lg:max-w-[865px] lg:h-[55px] lg:whitespace-nowrap md:max-w-[500px] font-normal leading-snug bg-[#736F5C]">
+          <h2 className="text-white text-[22px] lg:text-[44px] md:text-[40px] lg:max-w-[865px] lg:h-[55px] lg:whitespace-nowrap md:max-w-[500px] font-normal leading-snug bg-[#736F5C]">
             porte com quase <span className="font-semibold"> 200 projetos entregues </span>
           </h2>
         </div>
       </div>
+      <div className="block md:hidden mt-[-130px] ml-[37px] bg-[#736F5C]">
+        <h1 className="text-white w-[90%] text-[18px] mb-1 p-1 font-normal leading-snug bg-[#736F5C]">
+          Preparando o terreno para
+        </h1>
+        <h2 className="text-white w-[90%] text-[18px] mb-1 p-1 font-normal leading-snug bg-[#736F5C]">
+          obras de grande porte com
+        </h2>
+        <h3 className="text-white w-[95%] text-[18px] mb-1 p-1 font-normal leading-snug bg-[#736F5C]">
+          quase <span className="font-semibold"> 200 projetos entregues </span>
+        </h3>
+      </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
