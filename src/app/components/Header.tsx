@@ -22,7 +22,7 @@ const customSmoothScroll = (target: number, duration: number) => {
         if (elapsed < duration) {
             requestAnimationFrame(step);
         } else {
-            window.scrollTo(0, target); // Garante que termina no ponto exato
+            window.scrollTo(0, target);
         }
     };
 
@@ -33,7 +33,7 @@ const scrollToSection = (id: string, offset: number = 0) => {
     const element = document.getElementById(id);
     if (element) {
         const top = element.getBoundingClientRect().top + window.scrollY + offset;
-        customSmoothScroll(top, 800); // Define a duração da animação em 800ms
+        customSmoothScroll(top, 800);
     }
 };
 
